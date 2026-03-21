@@ -1,0 +1,4144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pattern Library — Anjouan Gaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Libre+Bodoni:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* =============================================
+       Pattern Library — Wrapper & Showcase Styles
+       ============================================= */
+
+    /* --- Library Shell --- */
+    .pl-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 2000;
+      background: #0D0F14;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .pl-header-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+
+    .pl-title {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em;
+    }
+
+    .pl-title strong {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .pl-nav {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+    }
+
+    .pl-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.4);
+      white-space: nowrap;
+      transition: color 0.15s;
+    }
+
+    .pl-nav a:hover {
+      color: #fff;
+    }
+
+    /* --- Pattern Section --- */
+    .pl-section {
+      padding-top: 4rem;
+    }
+
+    .pl-section:first-of-type {
+      margin-top: 56px;
+    }
+
+    .pl-category {
+      background: #0D0F14;
+      padding: 3rem 2rem 1.5rem;
+    }
+
+    .pl-category-title {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-light);
+      margin-bottom: 0.25rem;
+    }
+
+    .pl-category-count {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .pl-pattern {
+      position: relative;
+    }
+
+    .pl-label {
+      background: #0D0F14;
+      padding: 1.5rem 2rem 1rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .pl-number {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      color: var(--accent-light);
+      min-width: 2rem;
+    }
+
+    .pl-name {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .pl-tag {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.5rem;
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.35);
+      margin-left: auto;
+    }
+
+    .pl-preview {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Remove site-header fixed positioning inside pattern library */
+    .pl-preview .site-header {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Remove hero scroll compensation */
+    .pl-preview .hero {
+      padding-top: clamp(4rem, 8vh, 6rem);
+    }
+
+    /* --- New Pattern Styles --- */
+
+    /* Pattern 2 & 3: Page Hero */
+    .page-hero {
+      position: relative;
+      background: var(--navy);
+      padding: 3.5rem 2rem 3rem;
+      overflow: hidden;
+    }
+
+    .page-hero-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .breadcrumb a {
+      color: rgba(255,255,255,0.5);
+      transition: color 0.15s;
+    }
+
+    .breadcrumb a:hover {
+      color: #fff;
+    }
+
+    .breadcrumb .sep {
+      color: rgba(255,255,255,0.2);
+    }
+
+    .page-hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+
+    .page-hero-lead {
+      font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+      max-width: 720px;
+      margin-bottom: 1.5rem;
+    }
+
+    .page-hero-rule {
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+    }
+
+    .page-hero .hero-angle {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 24px;
+      background: var(--light);
+      clip-path: polygon(0 100%, 100% 100%, 100% 0);
+    }
+
+    /* Anchor Nav */
+    .anchor-nav {
+      background: var(--navy-deep);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 0 2rem;
+      position: sticky;
+      top: 56px; /* below pl-header */
+      z-index: 100;
+    }
+
+    .anchor-nav-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .anchor-nav a {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.45);
+      padding: 0.875rem 1.25rem;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .anchor-nav a:hover {
+      color: rgba(255,255,255,0.8);
+    }
+
+    .anchor-nav a.active {
+      color: #fff;
+      border-bottom-color: var(--accent);
+    }
+
+    /* Pattern 4: Lead Paragraph */
+    .lead-text {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      line-height: 1.7;
+      max-width: 800px;
+    }
+
+    .lead-text .diamond-accent {
+      color: var(--accent-light);
+      margin-right: 0.375rem;
+    }
+
+    .section-light .lead-text {
+      color: var(--navy);
+    }
+
+    .section-navy .lead-text {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* Pattern 5: Prose Block */
+    .prose {
+      max-width: 780px;
+    }
+
+    .prose p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-light .prose p {
+      color: var(--navy);
+    }
+
+    .prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    .prose a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .prose h3 {
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 2rem 0 1rem;
+      color: var(--navy);
+    }
+
+    /* Pattern 6: Two-Column Prose */
+    .two-col-prose {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .two-col-prose .col-divider {
+      position: relative;
+    }
+
+    .two-col-prose .col-divider::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -1.5rem;
+      width: 1px;
+      height: 100%;
+      background: var(--navy-10);
+    }
+
+    /* Pattern 8: Callout Box */
+    .callout {
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem 2rem;
+    }
+
+    .section-light .callout {
+      background: #fff;
+      border: 1px solid var(--navy-10);
+      border-left: 4px solid var(--accent);
+    }
+
+    .section-navy .callout {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-left: 4px solid var(--accent-light);
+    }
+
+    .callout-label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-light);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .callout p {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+
+    .section-light .callout p {
+      color: rgba(30, 40, 65, 0.8);
+    }
+
+    .section-navy .callout p {
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* Pattern 9: Pull Quote */
+    .pull-quote {
+      position: relative;
+      padding-top: 2rem;
+    }
+
+    .pull-quote::before {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .pull-quote blockquote {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .section-light .pull-quote blockquote {
+      color: var(--navy);
+    }
+
+    .section-navy .pull-quote blockquote {
+      color: #fff;
+    }
+
+    .pull-quote cite {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-style: normal;
+      opacity: 0.5;
+    }
+
+    /* Pattern 10: Diamond Bullet List */
+    .diamond-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      padding-left: 0;
+    }
+
+    .diamond-list li {
+      font-size: 0.9375rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.625rem;
+    }
+
+    .diamond-list li::before {
+      content: '\25C6';
+      color: var(--accent-light);
+      font-size: 0.625rem;
+      flex-shrink: 0;
+      position: relative;
+      top: 0.1em;
+    }
+
+    .section-light .diamond-list li {
+      color: rgba(30, 40, 65, 0.75);
+    }
+
+    .section-navy .diamond-list li {
+      color: rgba(255,255,255,0.78);
+    }
+
+    /* Pattern 11: Numbered Steps */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 4rem 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      position: relative;
+    }
+
+    .step:not(:last-child) {
+      border-bottom: 1px solid var(--navy-10);
+    }
+
+    .step-number {
+      font-family: var(--font-mono);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      padding-top: 0.125rem;
+    }
+
+    .step-content h4 {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-content p {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: rgba(30, 40, 65, 0.7);
+    }
+
+    /* Pattern 12: Definition List */
+    .def-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .def-item {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--navy-10);
+    }
+
+    .section-navy .def-item {
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+
+    .def-item:last-child {
+      border-bottom: none;
+    }
+
+    .def-term {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.375rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .def-term::before {
+      content: '\25C6';
+      color: var(--accent-light);
+      font-size: 0.5rem;
+    }
+
+    .section-light .def-term {
+      color: var(--navy);
+    }
+
+    .section-navy .def-term {
+      color: #fff;
+    }
+
+    .def-desc {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      padding-left: 1.125rem;
+    }
+
+    .section-light .def-desc {
+      color: rgba(30, 40, 65, 0.7);
+    }
+
+    .section-navy .def-desc {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Pattern 13: Document Checklist */
+    .doc-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .doc-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      background: #fff;
+      border: 1px solid var(--navy-10);
+    }
+
+    .doc-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--light);
+      border: 1px solid var(--navy-10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .doc-icon span {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .doc-name {
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--navy);
+    }
+
+    .doc-type {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-light);
+      background: rgba(165, 46, 63, 0.08);
+      padding: 0.2rem 0.5rem;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    /* Pattern 14: Escalation List */
+    .escalation {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .escalation-step {
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      position: relative;
+      transition: background 0.2s;
+    }
+
+    .escalation-step:not(:last-child)::after {
+      content: '\2192';
+      position: absolute;
+      right: -0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255,255,255,0.3);
+      font-size: 1.25rem;
+      z-index: 1;
+    }
+
+    .escalation-level {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 0.75rem;
+    }
+
+    .escalation-title {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.375rem;
+    }
+
+    .escalation-desc {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    .escalation-step.severity-4 {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .escalation-step.severity-4 .escalation-level,
+    .escalation-step.severity-4 .escalation-desc {
+      color: rgba(255,255,255,0.85);
+    }
+
+    .escalation-step.severity-3 {
+      border-left-width: 3px;
+      border-left-color: var(--accent-light);
+    }
+
+    /* Pattern 17: Comparison Cards */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .comparison-card {
+      background: #fff;
+      border: 1px solid var(--navy-10);
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .comparison-header {
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--navy-10);
+    }
+
+    .comparison-card:first-child .comparison-header {
+      border-top: 3px solid var(--accent);
+    }
+
+    .comparison-card:last-child .comparison-header {
+      border-top: 3px solid var(--navy);
+    }
+
+    .comparison-badge {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-light);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .comparison-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .comparison-body {
+      padding: 1.5rem 2rem;
+    }
+
+    .comparison-body p {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: rgba(30, 40, 65, 0.7);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Pattern 18: Stat Cards */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat-card {
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .stat-card:last-child {
+      border-right: none;
+    }
+
+    .stat-value {
+      font-family: var(--font-mono);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-light);
+    }
+
+    /* Pattern 19: Contact Cards */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid var(--navy-10);
+      border-top: 3px solid var(--accent);
+      padding: 2rem;
+    }
+
+    .contact-dept {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-desc {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: rgba(30, 40, 65, 0.6);
+      margin-bottom: 1rem;
+    }
+
+    .contact-link {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .contact-link:hover {
+      color: var(--accent-light);
+    }
+
+    /* Pattern 20: Download Cards */
+    .download-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .download-item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1.25rem 1.5rem;
+      background: #fff;
+      border: 1px solid var(--navy-10);
+      transition: border-color 0.15s;
+    }
+
+    .download-item:hover {
+      border-color: var(--accent);
+    }
+
+    .download-badge {
+      font-family: var(--font-mono);
+      font-size: 0.625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-light);
+      background: rgba(165, 46, 63, 0.08);
+      padding: 0.375rem 0.625rem;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+
+    .download-info {
+      flex: 1;
+    }
+
+    .download-name {
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--navy);
+      margin-bottom: 0.125rem;
+    }
+
+    .download-desc {
+      font-size: 0.8125rem;
+      color: rgba(30, 40, 65, 0.5);
+    }
+
+    .download-action {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      flex-shrink: 0;
+    }
+
+    /* Pattern 21: Data Table */
+    .data-table-wrap {
+      overflow-x: auto;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .data-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      padding: 0.875rem 1.25rem;
+      text-align: left;
+    }
+
+    .data-table tbody td {
+      padding: 0.875rem 1.25rem;
+      font-size: 0.875rem;
+      border-bottom: 1px solid var(--navy-10);
+      color: var(--navy);
+    }
+
+    .data-table tbody tr:nth-child(even) td {
+      background: var(--light);
+    }
+
+    .data-table tbody tr:nth-child(odd) td {
+      background: #fff;
+    }
+
+    /* Pattern 22: Key-Value Display */
+    .kv-display {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .kv-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      padding: 0.875rem 0;
+      border-bottom: 1px solid var(--navy-10);
+    }
+
+    .section-navy .kv-row {
+      border-bottom-color: rgba(255,255,255,0.08);
+    }
+
+    .kv-label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-light .kv-label {
+      color: rgba(30, 40, 65, 0.5);
+    }
+
+    .section-navy .kv-label {
+      color: var(--accent-light);
+    }
+
+    .kv-value {
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+
+    .section-light .kv-value {
+      color: var(--navy);
+    }
+
+    .section-navy .kv-value {
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* Pattern 23: Accordion */
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .accordion-item {
+      border: 1px solid var(--navy-10);
+      border-bottom: none;
+      background: #fff;
+    }
+
+    .accordion-item:last-child {
+      border-bottom: 1px solid var(--navy-10);
+    }
+
+    .accordion-item.open {
+      border-left: 3px solid var(--accent);
+    }
+
+    .accordion-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-heading);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .accordion-icon {
+      color: var(--accent-light);
+      font-size: 0.75rem;
+      transition: transform 0.2s;
+      flex-shrink: 0;
+      margin-left: 1rem;
+    }
+
+    .accordion-item.open .accordion-icon {
+      transform: rotate(90deg);
+    }
+
+    .accordion-panel {
+      display: none;
+      padding: 0 1.5rem 1.5rem;
+      border-top: 1px solid var(--navy-10);
+      background: var(--light);
+      padding: 1.25rem 1.5rem;
+    }
+
+    .accordion-item.open .accordion-panel {
+      display: block;
+    }
+
+    .accordion-panel p {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: rgba(30, 40, 65, 0.75);
+    }
+
+    /* Pattern 24: Tab Panel */
+    .tabs {
+      position: relative;
+    }
+
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--navy-10);
+    }
+
+    .section-navy .tab-bar {
+      border-bottom-color: rgba(255,255,255,0.1);
+    }
+
+    .tab-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.875rem 1.5rem;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .section-light .tab-btn {
+      color: rgba(30, 40, 65, 0.45);
+    }
+
+    .section-light .tab-btn.active {
+      color: var(--navy);
+      border-bottom-color: var(--accent);
+    }
+
+    .section-navy .tab-btn {
+      color: rgba(255,255,255,0.45);
+    }
+
+    .section-navy .tab-btn.active {
+      color: #fff;
+      border-bottom-color: var(--accent-light);
+    }
+
+    .tab-panel {
+      display: none;
+      padding: 2rem 0;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .tab-panel p {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .section-light .tab-panel p {
+      color: rgba(30, 40, 65, 0.75);
+    }
+
+    /* Pattern 25: Search Bar */
+    .search-verify {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .search-group {
+      display: flex;
+      gap: 0;
+    }
+
+    .search-input {
+      flex: 1;
+      padding: 0.875rem 1.25rem;
+      font-family: var(--font-main);
+      font-size: 1rem;
+      color: var(--navy);
+      background: #fff;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-right: none;
+      outline: none;
+    }
+
+    .search-input::placeholder {
+      color: rgba(30, 40, 65, 0.4);
+    }
+
+    .search-btn {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.875rem 1.75rem;
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+
+    .search-btn:hover {
+      background: var(--accent-light);
+    }
+
+    .search-help {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 0.75rem;
+    }
+
+    /* Pattern 26: CTA Banner */
+    .cta-banner {
+      background: var(--accent);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .cta-banner-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .cta-banner h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-banner p {
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .cta-banner .btn-white {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      background: #fff;
+      color: var(--accent);
+      padding: 0.875rem 2.5rem;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .cta-banner .btn-white:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    /* Pattern 27: Inline CTA */
+    .inline-cta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+    }
+
+    .inline-cta p {
+      font-size: 0.9375rem;
+      color: rgba(30, 40, 65, 0.7);
+    }
+
+    .inline-cta .cta-link {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--accent);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .inline-cta .cta-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Pattern 28: Button Pair */
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-light);
+      border-color: var(--accent-light);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-ghost:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .section-navy .btn-ghost {
+      border-color: rgba(255,255,255,0.3);
+      color: #fff;
+    }
+
+    .section-navy .btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .btn-lg {
+      font-size: 1rem;
+      padding: 1rem 2.5rem;
+    }
+
+    .btn-sm {
+      font-size: 0.75rem;
+      padding: 0.5rem 1.25rem;
+    }
+
+    /* Pattern 29: Breadcrumb (standalone, also in page-hero) */
+
+    /* Pattern 30: Page TOC (see anchor-nav above) */
+
+    /* Pattern 31: Section Divider */
+    .section-divider {
+      position: relative;
+      text-align: center;
+      margin: 3rem 0;
+    }
+
+    .section-divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--navy-10);
+    }
+
+    .section-divider span {
+      position: relative;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(30, 40, 65, 0.4);
+      background: var(--light);
+      padding: 0 1rem;
+    }
+
+    /* Accent rule variant */
+    .section-divider-rule {
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      margin: 3rem auto;
+    }
+
+    /* Pattern 33: Status Badges */
+    .status-badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.75rem;
+      font-weight: 500;
+    }
+
+    .status-active {
+      color: #1B6B3A;
+      background: rgba(27, 107, 58, 0.1);
+    }
+
+    .status-suspended {
+      color: #92680B;
+      background: rgba(146, 104, 11, 0.1);
+    }
+
+    .status-revoked {
+      color: var(--accent);
+      background: rgba(139, 24, 37, 0.1);
+    }
+
+    .status-expired {
+      color: rgba(30, 40, 65, 0.45);
+      background: rgba(30, 40, 65, 0.06);
+    }
+
+    /* Pattern 34: Alert Banner */
+    .alert-banner {
+      padding: 0.875rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .alert-banner-urgent {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .alert-banner-info {
+      background: var(--navy-deep);
+      color: rgba(255,255,255,0.85);
+      border-left: 4px solid var(--accent-light);
+    }
+
+    .alert-banner p {
+      font-size: 0.875rem;
+    }
+
+    .alert-banner .alert-date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+
+    .alert-close {
+      background: none;
+      border: none;
+      color: inherit;
+      font-size: 1.25rem;
+      cursor: pointer;
+      opacity: 0.5;
+      padding: 0 0.25rem;
+      line-height: 1;
+    }
+
+    .alert-close:hover {
+      opacity: 1;
+    }
+
+    /* Pattern 35: Seal Display */
+    .seal-display {
+      text-align: center;
+      padding: 3rem;
+      border: 1px dashed var(--navy-10);
+    }
+
+    .section-navy .seal-display {
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    .seal-placeholder {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 1.5rem;
+      border: 2px solid var(--navy-10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+    }
+
+    .section-navy .seal-placeholder {
+      border-color: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .seal-placeholder span {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      color: rgba(30, 40, 65, 0.3);
+      letter-spacing: 0.04em;
+    }
+
+    .section-navy .seal-placeholder span {
+      color: rgba(255,255,255,0.3);
+    }
+
+    .seal-caption {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: rgba(30, 40, 65, 0.5);
+    }
+
+    .section-navy .seal-caption {
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* Pattern 36: Certificate Preview */
+    .cert-preview {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #fff;
+      border: 2px solid var(--navy);
+      padding: 2.5rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    .cert-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--navy-10);
+    }
+
+    .cert-logo {
+      height: 40px;
+      width: auto;
+    }
+
+    .cert-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .cert-body {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .cert-qr {
+      width: 100px;
+      height: 100px;
+      background: var(--light);
+      border: 1px solid var(--navy-10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .cert-qr span {
+      font-family: var(--font-mono);
+      font-size: 0.5625rem;
+      text-transform: uppercase;
+      color: rgba(30, 40, 65, 0.3);
+    }
+
+    /* Pattern 37: Authority Logo Bar */
+    .authority-bar {
+      padding: 2.5rem 2rem;
+    }
+
+    .authority-bar-label {
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-light .authority-bar-label {
+      color: rgba(30, 40, 65, 0.35);
+    }
+
+    .section-navy .authority-bar-label {
+      color: rgba(255,255,255,0.3);
+    }
+
+    .authority-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+    }
+
+    .authority-logo-item {
+      font-family: var(--font-heading);
+      font-size: 0.9375rem;
+      font-weight: 600;
+    }
+
+    .section-light .authority-logo-item {
+      color: rgba(30, 40, 65, 0.5);
+    }
+
+    .section-navy .authority-logo-item {
+      color: rgba(255,255,255,0.4);
+    }
+
+    .authority-logo-sep {
+      width: 1px;
+      height: 2rem;
+    }
+
+    .section-light .authority-logo-sep {
+      background: var(--navy-10);
+    }
+
+    .section-navy .authority-logo-sep {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* --- Gutenberg Core Block Styles --- */
+
+    /* Pattern 40: Headings */
+    .wp-block-heading {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .section-light .wp-block-heading { color: var(--navy); }
+    .section-navy .wp-block-heading { color: #fff; }
+
+    h1.wp-block-heading { font-size: clamp(2.5rem, 5vw, 4rem); }
+    h2.wp-block-heading { font-size: clamp(2rem, 3.5vw, 3rem); }
+    h3.wp-block-heading { font-size: 1.375rem; }
+    h4.wp-block-heading { font-size: 1.125rem; }
+    h5.wp-block-heading {
+      font-family: var(--font-main);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h6.wp-block-heading {
+      font-family: var(--font-main);
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    /* Pattern 42: Image */
+    .wp-block-image {
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-image img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .wp-block-image figcaption,
+    .wp-element-caption {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      margin-top: 0.75rem;
+    }
+
+    .section-light .wp-element-caption {
+      color: rgba(30, 40, 65, 0.5);
+    }
+
+    /* Pattern 43: Gallery */
+    .wp-block-gallery {
+      display: grid;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-gallery.columns-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wp-block-gallery.columns-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .wp-block-gallery .wp-block-image {
+      margin-bottom: 0;
+    }
+
+    .wp-block-gallery .wp-block-image img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border: 1px solid var(--navy-10);
+      transition: border-color 0.15s;
+    }
+
+    .wp-block-gallery .wp-block-image img:hover {
+      border-color: var(--accent);
+    }
+
+    /* Pattern 44: Video/Embed */
+    .wp-block-embed {
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-embed .wp-block-embed__wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      background: var(--navy);
+      border: 1px solid var(--navy-10);
+    }
+
+    .wp-block-embed .wp-block-embed__wrapper .embed-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+    }
+
+    /* Pattern 45: Buttons */
+    .wp-block-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-button__link {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+      transition: background 0.15s, transform 0.1s;
+      cursor: pointer;
+    }
+
+    .wp-block-button:not(.is-style-outline) .wp-block-button__link {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .wp-block-button:not(.is-style-outline) .wp-block-button__link:hover {
+      background: var(--accent-light);
+    }
+
+    .wp-block-button.is-style-outline .wp-block-button__link {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+    }
+
+    .wp-block-button.is-style-outline .wp-block-button__link:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    /* Pattern 46: Columns */
+    .wp-block-columns {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-columns.has-2-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .wp-block-columns.has-3-columns {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Pattern 47: Group */
+    .wp-block-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-group.group-light {
+      background: var(--light);
+      border: 1px solid var(--navy-10);
+      padding: 2rem;
+    }
+
+    .wp-block-group.group-navy {
+      background: var(--navy);
+      padding: 2rem;
+    }
+
+    .wp-block-group.group-navy p { color: rgba(255,255,255,0.8); }
+    .wp-block-group.group-navy .wp-block-heading { color: #fff; }
+
+    .wp-block-group.group-bordered {
+      background: #fff;
+      border: 1px solid var(--navy-10);
+      padding: 2rem;
+    }
+
+    /* Pattern 48: Cover */
+    .wp-block-cover {
+      position: relative;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      background: var(--navy);
+      overflow: hidden;
+    }
+
+    .wp-block-cover__background {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--navy-deep) 0%, transparent 60%);
+      opacity: 0.9;
+    }
+
+    .wp-block-cover__inner-container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 720px;
+    }
+
+    .wp-block-cover__inner-container .wp-block-heading {
+      color: #fff;
+    }
+
+    .wp-block-cover__inner-container p {
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* Pattern 49: Separator */
+    .wp-block-separator {
+      border: none;
+      margin: 2.5rem 0;
+    }
+
+    .wp-block-separator.is-style-default {
+      height: 1px;
+      background: var(--navy-10);
+    }
+
+    .wp-block-separator.is-style-wide {
+      height: 1px;
+      background: var(--navy-10);
+      width: 100%;
+    }
+
+    .wp-block-separator.is-style-accent {
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+    }
+
+    .wp-block-separator.is-style-diamonds {
+      background: none;
+      text-align: center;
+      height: auto;
+    }
+
+    .wp-block-separator.is-style-diamonds::after {
+      content: '\25C6\2009\25C6\2009\25C6';
+      font-size: 0.5rem;
+      color: rgba(30, 40, 65, 0.3);
+      letter-spacing: 0.25rem;
+    }
+
+    /* Pattern 50: Spacer */
+    .wp-block-spacer { display: block; }
+    .wp-block-spacer.spacer-sm { height: 2rem; }
+    .wp-block-spacer.spacer-md { height: 4rem; }
+    .wp-block-spacer.spacer-lg { height: 6rem; }
+    .wp-block-spacer.spacer-xl { height: 8rem; }
+
+    /* Pattern 51: List */
+    .wp-block-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-left: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    ul.wp-block-list li {
+      font-size: 0.9375rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.625rem;
+      list-style: none;
+    }
+
+    ul.wp-block-list li::before {
+      content: '\25C6';
+      color: var(--accent-light);
+      font-size: 0.5rem;
+      flex-shrink: 0;
+      position: relative;
+      top: 0.15em;
+    }
+
+    ol.wp-block-list {
+      counter-reset: ol-counter;
+      padding-left: 0;
+    }
+
+    ol.wp-block-list li {
+      font-size: 0.9375rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      list-style: none;
+      counter-increment: ol-counter;
+    }
+
+    ol.wp-block-list li::before {
+      content: counter(ol-counter) '.';
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      color: var(--accent);
+      font-weight: 500;
+      flex-shrink: 0;
+      min-width: 1.5rem;
+    }
+
+    .section-light .wp-block-list li {
+      color: rgba(30, 40, 65, 0.75);
+    }
+
+    .section-navy .wp-block-list li {
+      color: rgba(255,255,255,0.78);
+    }
+
+    /* Pattern 52: Quote */
+    .wp-block-quote {
+      border-left: 4px solid var(--accent);
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-quote p {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+
+    .section-light .wp-block-quote p { color: var(--navy); }
+
+    .wp-block-quote cite {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-style: normal;
+      margin-top: 0.75rem;
+      opacity: 0.5;
+    }
+
+    .wp-block-pullquote {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding: 2rem 0;
+      position: relative;
+    }
+
+    .wp-block-pullquote::before {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      margin: 0 auto 1.5rem;
+    }
+
+    .wp-block-pullquote blockquote p {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+      line-height: 1.4;
+    }
+
+    .section-light .wp-block-pullquote blockquote p { color: var(--navy); }
+
+    .wp-block-pullquote cite {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-style: normal;
+      margin-top: 1rem;
+      opacity: 0.5;
+    }
+
+    /* Pattern 53: Table */
+    .wp-block-table {
+      margin-bottom: 1.5rem;
+      overflow-x: auto;
+    }
+
+    .wp-block-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .wp-block-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+      padding: 0.875rem 1.25rem;
+      text-align: left;
+    }
+
+    .wp-block-table tbody td {
+      padding: 0.875rem 1.25rem;
+      font-size: 0.875rem;
+      border-bottom: 1px solid var(--navy-10);
+      color: var(--navy);
+    }
+
+    .wp-block-table tbody tr:nth-child(even) td { background: var(--light); }
+    .wp-block-table tbody tr:nth-child(odd) td { background: #fff; }
+
+    /* Pattern 54: Details */
+    details.wp-block-details {
+      border: 1px solid var(--navy-10);
+      background: #fff;
+      margin-bottom: -1px;
+    }
+
+    details.wp-block-details:last-of-type {
+      margin-bottom: 1.5rem;
+    }
+
+    details.wp-block-details summary {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      padding: 1.125rem 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      list-style: none;
+    }
+
+    details.wp-block-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.wp-block-details summary::before {
+      content: '\25C6';
+      color: var(--accent-light);
+      font-size: 0.625rem;
+      transition: transform 0.2s;
+    }
+
+    details.wp-block-details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    details.wp-block-details[open] {
+      border-left: 3px solid var(--accent);
+    }
+
+    details.wp-block-details .wp-block-details__content {
+      padding: 0 1.5rem 1.25rem;
+      border-top: 1px solid var(--navy-10);
+      padding-top: 1.25rem;
+      background: var(--light);
+    }
+
+    details.wp-block-details .wp-block-details__content p {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: rgba(30, 40, 65, 0.75);
+    }
+
+    /* Pattern 55: File */
+    .wp-block-file {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1rem 1.5rem;
+      background: #fff;
+      border: 1px solid var(--navy-10);
+      margin-bottom: 0.75rem;
+    }
+
+    .wp-block-file .wp-block-file__content-wrapper {
+      flex: 1;
+    }
+
+    .wp-block-file a:first-of-type {
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--navy);
+    }
+
+    .wp-block-file .wp-block-file__button {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    /* Pattern 56: Search */
+    .wp-block-search {
+      display: flex;
+      gap: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-search__input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      font-family: var(--font-main);
+      font-size: 0.9375rem;
+      border: 1px solid var(--navy-10);
+      border-right: none;
+      outline: none;
+      color: var(--navy);
+      background: #fff;
+    }
+
+    .wp-block-search__input::placeholder {
+      color: rgba(30, 40, 65, 0.35);
+    }
+
+    .wp-block-search__button {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: #fff;
+      border: 1px solid var(--accent);
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .wp-block-search__button:hover {
+      background: var(--accent-light);
+    }
+
+    /* Pattern 57: Social Links */
+    .wp-block-social-links {
+      display: flex;
+      gap: 0.75rem;
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .wp-block-social-link {
+      width: 2.25rem;
+      height: 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 0.6875rem;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+
+    .wp-block-social-link:hover {
+      background: var(--accent);
+    }
+
+    .section-navy .wp-block-social-link {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .section-navy .wp-block-social-link:hover {
+      background: var(--accent-light);
+    }
+
+    /* Pattern 60: Pagination */
+    .wp-block-query-pagination {
+      display: flex;
+      align-items: center;
+      gap: 0.375rem;
+      margin-top: 2rem;
+    }
+
+    .wp-block-query-pagination a,
+    .wp-block-query-pagination span {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid var(--navy-10);
+      color: var(--navy);
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .wp-block-query-pagination a:hover {
+      background: var(--light);
+    }
+
+    .wp-block-query-pagination .current {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .wp-block-query-pagination .prev,
+    .wp-block-query-pagination .next {
+      color: var(--accent);
+      border-color: var(--navy-10);
+    }
+
+    /* --- Responsive for new patterns --- */
+    @media (max-width: 768px) {
+      .two-col-prose { grid-template-columns: 1fr; gap: 1.5rem; }
+      .two-col-prose .col-divider::after { display: none; }
+      .comparison-grid { grid-template-columns: 1fr; }
+      .stat-row { grid-template-columns: repeat(2, 1fr); }
+      .stat-card { border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .escalation { grid-template-columns: 1fr; }
+      .escalation-step:not(:last-child)::after { display: none; }
+      .kv-row { grid-template-columns: 1fr; gap: 0.25rem; }
+      .search-group { flex-direction: column; }
+      .search-input { border-right: 1px solid rgba(255,255,255,0.15); }
+      .wp-block-columns.has-2-columns,
+      .wp-block-columns.has-3-columns { grid-template-columns: 1fr; }
+      .cert-body { grid-template-columns: 1fr; }
+      .anchor-nav-inner { gap: 0; }
+      .pl-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pattern Library Header -->
+  <div class="pl-header">
+    <div class="pl-header-inner">
+      <div class="pl-title"><strong>Anjouan Gaming</strong> / Pattern Library</div>
+      <nav class="pl-nav">
+        <a href="#cat-heroes">Heroes</a>
+        <a href="#cat-content">Content</a>
+        <a href="#cat-lists">Lists</a>
+        <a href="#cat-cards">Cards</a>
+        <a href="#cat-data">Data</a>
+        <a href="#cat-interactive">Interactive</a>
+        <a href="#cat-cta">CTAs</a>
+        <a href="#cat-nav">Navigation</a>
+        <a href="#cat-notices">Notices</a>
+        <a href="#cat-trust">Trust</a>
+        <a href="#cat-global">Global</a>
+        <a href="#cat-gutenberg">Gutenberg</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ============================
+       HEROES & PAGE HEADERS
+       ============================ -->
+  <div class="pl-section" id="cat-heroes" style="margin-top:56px;">
+    <div class="pl-category">
+      <div class="pl-category-title">Heroes &amp; Page Headers</div>
+      <div class="pl-category-count">Patterns 1 - 3</div>
+    </div>
+
+    <!-- Pattern 1: Home Hero -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">01</span>
+        <span class="pl-name">Home Hero</span>
+        <span class="pl-tag">Existing v1.1</span>
+      </div>
+      <div class="pl-preview">
+        <section class="hero">
+          <div class="hero-inner">
+            <h1 class="hero-title">Anjouan Gaming</h1>
+            <p class="hero-subtitle">Internet Gaming Regulatory Authority</p>
+            <div class="hero-mandate">
+              <p>The designated regulatory authority for the licensing and supervision of internet gaming operations under the laws of the Autonomous Island of Anjouan.</p>
+            </div>
+            <div class="hero-meta">
+              <div class="meta-item">
+                <span class="meta-label">Jurisdiction</span>
+                <span class="meta-value">Autonomous Island of Anjouan</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Regulatory Scope</span>
+                <span class="meta-value">Internet Gaming</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Licence Categories</span>
+                <span class="meta-value">B2C &amp; B2B</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-angle"></div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 2: Page Hero -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">02</span>
+        <span class="pl-name">Page Hero</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="page-hero">
+          <div class="page-hero-inner">
+            <div class="breadcrumb">
+              <a href="#">Home</a>
+              <span class="sep">/</span>
+              <span>About the Authority</span>
+            </div>
+            <h1 class="page-hero-title">About the Authority</h1>
+            <p class="page-hero-lead">The Anjouan Gaming Authority is responsible for the administration and supervision of Internet Gaming Licences issued under the regulatory framework of the Autonomous Island of Anjouan.</p>
+            <div class="page-hero-rule"></div>
+          </div>
+          <div class="hero-angle"></div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 3: Page Hero with Anchor Nav -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">03</span>
+        <span class="pl-name">Page Hero with Anchor Nav</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="page-hero">
+          <div class="page-hero-inner">
+            <div class="breadcrumb">
+              <a href="#">Home</a>
+              <span class="sep">/</span>
+              <span>Regulatory Framework</span>
+            </div>
+            <h1 class="page-hero-title">Regulatory Framework</h1>
+            <p class="page-hero-lead">The Authority operates under a defined regulatory framework designed to ensure transparency and oversight of licensed operators.</p>
+            <div class="page-hero-rule"></div>
+          </div>
+        </section>
+        <nav class="anchor-nav">
+          <div class="anchor-nav-inner">
+            <a href="#" class="active">Due Diligence</a>
+            <a href="#">Supervision</a>
+            <a href="#">Enforcement</a>
+            <a href="#">Complaints</a>
+            <a href="#">Verification</a>
+            <a href="#">Licence Seal</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       CONTENT BLOCKS
+       ============================ -->
+  <div class="pl-section" id="cat-content">
+    <div class="pl-category">
+      <div class="pl-category-title">Content Blocks</div>
+      <div class="pl-category-count">Patterns 4 - 9</div>
+    </div>
+
+    <!-- Pattern 4: Lead Paragraph -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">04</span>
+        <span class="pl-name">Lead Paragraph</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <p class="lead-text"><span class="diamond-accent">&#9670;</span> The Anjouan Gaming Authority administers and supervises Internet Gaming Licences issued under the regulatory framework of the Autonomous Island of Anjouan. The Authority's objective is to maintain a transparent and stable licensing environment while supporting the development of the international digital gaming industry.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 5: Prose Block -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">05</span>
+        <span class="pl-name">Prose Block</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="prose">
+              <h3>Regulatory Principles Charter</h3>
+              <p>The Authority operates according to core regulatory principles designed to maintain transparency, integrity, and stability within the licensing framework. The Charter outlines the guiding principles governing the Authority's regulatory mandate and supervisory approach.</p>
+              <p>The Authority's responsibilities include the administration of Internet Gaming Licences, oversight of compliance with licence conditions, maintenance of the public licence registry, and proportionate regulatory enforcement where necessary.</p>
+              <p>The Authority operates within the scope of its <a href="#">regulatory mandate</a> and does not act as a forum for resolving private commercial disputes between third parties.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 6: Two-Column Prose -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">06</span>
+        <span class="pl-name">Two-Column Prose</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="section-header">
+              <h2 class="section-title">Authority Overview</h2>
+              <div class="section-rule"></div>
+            </div>
+            <div class="two-col-prose">
+              <div class="col-divider">
+                <p style="font-size:0.9375rem;line-height:1.65;color:rgba(30,40,65,0.75)">The Anjouan Gaming Authority is responsible for the administration and supervision of Internet Gaming Licences issued under the regulatory framework of the Autonomous Island of Anjouan. The Authority maintains a licensing structure intended to support the global digital gaming industry while promoting transparency and regulatory oversight.</p>
+              </div>
+              <div>
+                <p style="font-size:0.9375rem;line-height:1.65;color:rgba(30,40,65,0.75)">The Authority administers licence applications, maintains the public licence registry, and monitors compliance with applicable licence conditions. Licensed operators are required to provide accurate operational information and maintain compliance with the terms of their licence.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 7: Text + Sidebar Facts -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">07</span>
+        <span class="pl-name">Text + Sidebar Facts</span>
+        <span class="pl-tag">Existing v1.1</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="section-header">
+              <h2 class="section-title">Regulatory Mandate</h2>
+              <div class="section-rule"></div>
+            </div>
+            <div class="overview-grid">
+              <div class="overview-main">
+                <p>Anjouan Gaming administers the internet gaming licensing regime established under Anjouan law. The authority is responsible for the issuance, supervision, and enforcement of internet gaming licences within its jurisdiction.</p>
+                <p>All licensed operators are subject to defined regulatory standards, ongoing compliance obligations, and supervisory oversight. The authority maintains a public register of licensed entities and publishes enforcement actions as required.</p>
+              </div>
+              <div class="overview-side">
+                <div class="fact-block">
+                  <span class="fact-label">Administered by</span>
+                  <span class="fact-value">Anjouan Licensing Services Inc.</span>
+                </div>
+                <div class="fact-block">
+                  <span class="fact-label">Governing Authority</span>
+                  <span class="fact-value">Anjouan Offshore Financial Authority</span>
+                </div>
+                <div class="fact-block">
+                  <span class="fact-label">Supervisory Board</span>
+                  <span class="fact-value">Anjouan Gaming Board</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 8: Callout Box -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">08</span>
+        <span class="pl-name">Callout Box</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <!-- Light variant -->
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="callout">
+              <span class="callout-label">Important</span>
+              <p>The Authority does not adjudicate private commercial disputes between third parties. Matters relating to trademark ownership, domain name rights, contractual disputes, or other private legal matters fall within the jurisdiction of competent courts or arbitral bodies.</p>
+            </div>
+          </div>
+        </section>
+        <!-- Dark variant -->
+        <section class="section section-navy" style="padding-top:2rem;">
+          <div class="section-inner">
+            <div class="callout">
+              <span class="callout-label">Notice</span>
+              <p>Licensees must notify the Authority of material changes affecting licensed operations, including updates to operational domains used in connection with licensed gaming activities.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 9: Pull Quote -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">09</span>
+        <span class="pl-name">Pull Quote / Regulatory Statement</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="pull-quote">
+              <blockquote>The Authority's objective is to maintain a transparent and stable licensing environment while supporting the development of the international digital gaming industry.</blockquote>
+              <cite>Anjouan Gaming Authority Charter</cite>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       LISTS
+       ============================ -->
+  <div class="pl-section" id="cat-lists">
+    <div class="pl-category">
+      <div class="pl-category-title">Lists</div>
+      <div class="pl-category-count">Patterns 10 - 14</div>
+    </div>
+
+    <!-- Pattern 10: Diamond Bullet List -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">10</span>
+        <span class="pl-name">Diamond Bullet List</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <h3 style="font-family:var(--font-heading);font-size:1.375rem;font-weight:700;margin-bottom:1.25rem;color:var(--navy)">Licensing Due Diligence</h3>
+            <ul class="diamond-list">
+              <li>Verification of corporate registration documents</li>
+              <li>Review of ownership and control structures</li>
+              <li>Identification of directors and beneficial owners</li>
+              <li>Sanctions screening against applicable international lists</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 11: Numbered Steps -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">11</span>
+        <span class="pl-name">Numbered Steps</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="section-header">
+              <h2 class="section-title">Application Process</h2>
+              <div class="section-rule"></div>
+            </div>
+            <div class="steps" style="max-width:780px">
+              <div class="step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                  <h4>Submission of Documentation</h4>
+                  <p>Applicants must submit the required application documentation including corporate formation documents and information relating to directors and beneficial owners.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                  <h4>Review of Applicant Information</h4>
+                  <p>The Authority reviews all submitted documentation and may request additional information where necessary to complete the assessment.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                  <h4>Regulatory Due Diligence</h4>
+                  <p>Completion of regulatory due diligence including verification of ownership structures and sanctions screening against applicable international lists.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                  <h4>Licence Issuance</h4>
+                  <p>Issuance of the Internet Gaming Licence upon successful completion of the application process and approval by the Authority.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 12: Definition List -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">12</span>
+        <span class="pl-name">Definition List</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="def-list" style="max-width:780px">
+              <div class="def-item">
+                <div class="def-term">Active</div>
+                <div class="def-desc">The licence is currently valid and the operator is authorised to conduct licensed gaming activities.</div>
+              </div>
+              <div class="def-item">
+                <div class="def-term">Suspended</div>
+                <div class="def-desc">The licence has been temporarily suspended pending investigation or corrective action by the licensee.</div>
+              </div>
+              <div class="def-item">
+                <div class="def-term">Revoked</div>
+                <div class="def-desc">The licence has been permanently withdrawn due to regulatory breaches or failure to comply with licence conditions.</div>
+              </div>
+              <div class="def-item">
+                <div class="def-term">Expired</div>
+                <div class="def-desc">The licence validity period has ended and the operator is no longer authorised to conduct licensed activities.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 13: Document Checklist -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">13</span>
+        <span class="pl-name">Document Checklist</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="doc-checklist" style="max-width:640px">
+              <div class="doc-item">
+                <div class="doc-icon"><span>doc</span></div>
+                <span class="doc-name">Corporate Formation Documents</span>
+                <span class="doc-type">Required</span>
+              </div>
+              <div class="doc-item">
+                <div class="doc-icon"><span>doc</span></div>
+                <span class="doc-name">Directors &amp; Beneficial Owners Information</span>
+                <span class="doc-type">Required</span>
+              </div>
+              <div class="doc-item">
+                <div class="doc-icon"><span>id</span></div>
+                <span class="doc-name">Identification Documentation</span>
+                <span class="doc-type">Required</span>
+              </div>
+              <div class="doc-item">
+                <div class="doc-icon"><span>pdf</span></div>
+                <span class="doc-name">Application Forms &amp; Declarations</span>
+                <span class="doc-type">Required</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 14: Escalation List -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">14</span>
+        <span class="pl-name">Escalation List</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-navy">
+          <div class="section-inner">
+            <div class="section-header">
+              <h2 class="section-title">Enforcement Escalation</h2>
+              <div class="section-rule"></div>
+            </div>
+            <div class="escalation">
+              <div class="escalation-step">
+                <div class="escalation-level">Level 1</div>
+                <div class="escalation-title">Compliance Notice</div>
+                <div class="escalation-desc">Requiring corrective action within a specified period</div>
+              </div>
+              <div class="escalation-step">
+                <div class="escalation-level">Level 2</div>
+                <div class="escalation-title">Administrative Penalty</div>
+                <div class="escalation-desc">Financial penalties for continued non-compliance</div>
+              </div>
+              <div class="escalation-step severity-3">
+                <div class="escalation-level">Level 3</div>
+                <div class="escalation-title">Suspension</div>
+                <div class="escalation-desc">Temporary suspension of gaming licence</div>
+              </div>
+              <div class="escalation-step severity-4">
+                <div class="escalation-level">Level 4</div>
+                <div class="escalation-title">Revocation</div>
+                <div class="escalation-desc">Permanent withdrawal of gaming licence</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       CARDS & GRIDS
+       ============================ -->
+  <div class="pl-section" id="cat-cards">
+    <div class="pl-category">
+      <div class="pl-category-title">Cards &amp; Grids</div>
+      <div class="pl-category-count">Patterns 15 - 20</div>
+    </div>
+
+    <!-- Pattern 15: Feature Card Grid (dark) -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">15</span>
+        <span class="pl-name">Feature Card Grid (dark)</span>
+        <span class="pl-tag">Existing v1.1</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-navy">
+          <div class="section-inner">
+            <div class="areas-grid">
+              <div class="area-block">
+                <div class="area-icon"><span class="diamond-lg">&#9670;</span></div>
+                <h3 class="area-title">Framework</h3>
+                <p class="area-desc">The regulatory framework defines licensing standards, due diligence requirements, and compliance obligations applicable to all internet gaming operations.</p>
+                <ul class="area-list">
+                  <li><span class="diamond-sm">&#9670;</span> Licensing due diligence</li>
+                  <li><span class="diamond-sm">&#9670;</span> Regulatory standards</li>
+                  <li><span class="diamond-sm">&#9670;</span> Code of conduct</li>
+                </ul>
+              </div>
+              <div class="area-block">
+                <div class="area-icon"><span class="diamond-lg">&#9670;</span></div>
+                <h3 class="area-title">Licensing</h3>
+                <p class="area-desc">Internet gaming licences are issued in defined categories for business-to-consumer and business-to-business operations.</p>
+                <ul class="area-list">
+                  <li><span class="diamond-sm">&#9670;</span> B2C and B2B categories</li>
+                  <li><span class="diamond-sm">&#9670;</span> Defined conditions</li>
+                  <li><span class="diamond-sm">&#9670;</span> Structured application process</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 16: Feature Card Grid (light) -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">16</span>
+        <span class="pl-name">Feature Card Grid (light)</span>
+        <span class="pl-tag">Existing v1.1</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="jurisdiction-grid">
+              <div class="jurisdiction-block">
+                <h3>Establishment</h3>
+                <p>Anjouan Gaming operates under the authority of the Anjouan Offshore Financial Authority, established under the laws of the Autonomous Island of Anjouan.</p>
+              </div>
+              <div class="jurisdiction-block">
+                <h3>Compliance Standards</h3>
+                <p>Licensed operators are required to maintain compliance with anti-money laundering provisions and all applicable licence conditions.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 17: Comparison Cards -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">17</span>
+        <span class="pl-name">Comparison Cards</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="section-header">
+              <h2 class="section-title">Licence Types</h2>
+              <div class="section-rule"></div>
+            </div>
+            <div class="comparison-grid">
+              <div class="comparison-card">
+                <div class="comparison-header">
+                  <span class="comparison-badge">B2C</span>
+                  <h3 class="comparison-title">Operator Licence</h3>
+                </div>
+                <div class="comparison-body">
+                  <p>Licences for entities operating online gaming platforms offering services directly to players.</p>
+                  <ul class="diamond-list">
+                    <li>Direct player-facing operations</li>
+                    <li>Full regulatory compliance required</li>
+                    <li>Ongoing supervision and reporting</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="comparison-card">
+                <div class="comparison-header">
+                  <span class="comparison-badge">B2B</span>
+                  <h3 class="comparison-title">Service Provider Licence</h3>
+                </div>
+                <div class="comparison-body">
+                  <p>Approvals for companies providing technology or services to licensed gaming operators.</p>
+                  <ul class="diamond-list">
+                    <li>Technology and platform services</li>
+                    <li>Support services to licensed operators</li>
+                    <li>Defined compliance obligations</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 18: Stat Cards -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">18</span>
+        <span class="pl-name">Stat Cards Row</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-navy">
+          <div class="section-inner">
+            <div class="stat-row">
+              <div class="stat-card">
+                <div class="stat-value">142</div>
+                <div class="stat-label">Active Licences</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">2</div>
+                <div class="stat-label">Licence Categories</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">24/7</div>
+                <div class="stat-label">Registry Access</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">2024</div>
+                <div class="stat-label">Established</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 19: Contact Department Cards -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">19</span>
+        <span class="pl-name">Contact Department Cards</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="section-header">
+              <h2 class="section-title">Contact</h2>
+              <div class="section-rule"></div>
+            </div>
+            <div class="contact-grid">
+              <div class="contact-card">
+                <h3 class="contact-dept">General Enquiries</h3>
+                <p class="contact-desc">For general information regarding the licensing framework or public registry.</p>
+                <a href="#" class="contact-link">info@anjouangaming.com</a>
+              </div>
+              <div class="contact-card">
+                <h3 class="contact-dept">Licensing Department</h3>
+                <p class="contact-desc">For enquiries relating to licence applications and licensing procedures.</p>
+                <a href="#" class="contact-link">licensing@anjouangaming.com</a>
+              </div>
+              <div class="contact-card">
+                <h3 class="contact-dept">Compliance &amp; Enforcement</h3>
+                <p class="contact-desc">For matters relating to regulatory compliance or reporting of potential breaches.</p>
+                <a href="#" class="contact-link">compliance@anjouangaming.com</a>
+              </div>
+              <div class="contact-card">
+                <h3 class="contact-dept">Media &amp; Public Information</h3>
+                <p class="contact-desc">For media enquiries and requests relating to regulatory information.</p>
+                <a href="#" class="contact-link">media@anjouangaming.com</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 20: Download Cards -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">20</span>
+        <span class="pl-name">Download Cards</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="download-list" style="max-width:640px">
+              <div class="download-item">
+                <span class="download-badge">PDF</span>
+                <div class="download-info">
+                  <div class="download-name">Licence Application Form</div>
+                  <div class="download-desc">Standard application form for Internet Gaming Licence</div>
+                </div>
+                <a href="#" class="download-action">Download &#8595;</a>
+              </div>
+              <div class="download-item">
+                <span class="download-badge">PDF</span>
+                <div class="download-info">
+                  <div class="download-name">Licence Conditions Document</div>
+                  <div class="download-desc">Terms and conditions applicable to all issued licences</div>
+                </div>
+                <a href="#" class="download-action">Download &#8595;</a>
+              </div>
+              <div class="download-item">
+                <span class="download-badge">PDF</span>
+                <div class="download-info">
+                  <div class="download-name">Regulatory Guidance Notes</div>
+                  <div class="download-desc">Guidance for applicants and licensed operators</div>
+                </div>
+                <a href="#" class="download-action">Download &#8595;</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       TABLES & DATA
+       ============================ -->
+  <div class="pl-section" id="cat-data">
+    <div class="pl-category">
+      <div class="pl-category-title">Tables &amp; Data</div>
+      <div class="pl-category-count">Patterns 21 - 22</div>
+    </div>
+
+    <!-- Pattern 21: Data Table -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">21</span>
+        <span class="pl-name">Data Table</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="section-header">
+              <h2 class="section-title">Fees</h2>
+              <div class="section-rule"></div>
+            </div>
+            <div class="data-table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Fee Type</th>
+                    <th>B2C Operator</th>
+                    <th>B2B Provider</th>
+                    <th>Frequency</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Application Fee</td>
+                    <td>$5,000</td>
+                    <td>$3,000</td>
+                    <td>One-time</td>
+                  </tr>
+                  <tr>
+                    <td>Licence Issuance Fee</td>
+                    <td>$25,000</td>
+                    <td>$15,000</td>
+                    <td>One-time</td>
+                  </tr>
+                  <tr>
+                    <td>Annual Renewal Fee</td>
+                    <td>$20,000</td>
+                    <td>$10,000</td>
+                    <td>Annual</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 22: Key-Value Display -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">22</span>
+        <span class="pl-name">Key-Value Display</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-navy">
+          <div class="section-inner">
+            <div class="kv-display" style="max-width:640px">
+              <div class="kv-row">
+                <div class="kv-label">Licensee</div>
+                <div class="kv-value">Example Gaming Ltd.</div>
+              </div>
+              <div class="kv-row">
+                <div class="kv-label">Licence Number</div>
+                <div class="kv-value" style="font-family:var(--font-mono)">AGA-2026-00142</div>
+              </div>
+              <div class="kv-row">
+                <div class="kv-label">Status</div>
+                <div class="kv-value"><span class="status-badge status-active">Active</span></div>
+              </div>
+              <div class="kv-row">
+                <div class="kv-label">Approved Domains</div>
+                <div class="kv-value">example-gaming.com, example-casino.com</div>
+              </div>
+              <div class="kv-row">
+                <div class="kv-label">Valid Until</div>
+                <div class="kv-value">31 December 2027</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       INTERACTIVE
+       ============================ -->
+  <div class="pl-section" id="cat-interactive">
+    <div class="pl-category">
+      <div class="pl-category-title">Interactive</div>
+      <div class="pl-category-count">Patterns 23 - 25</div>
+    </div>
+
+    <!-- Pattern 23: Accordion -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">23</span>
+        <span class="pl-name">Accordion</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="section-header">
+              <h2 class="section-title">Frequently Asked Questions</h2>
+              <div class="section-rule"></div>
+            </div>
+            <div class="accordion" style="max-width:780px">
+              <div class="accordion-item open">
+                <button class="accordion-trigger">
+                  What types of licences does the Authority issue?
+                  <span class="accordion-icon">&#9670;</span>
+                </button>
+                <div class="accordion-panel">
+                  <p>The Authority issues Internet Gaming Licences in two categories: B2C Operator Licences for entities operating online gaming platforms offering services directly to players, and B2B Service Provider Licences for companies providing technology or services to licensed gaming operators.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-trigger">
+                  How can I verify a licence?
+                  <span class="accordion-icon">&#9670;</span>
+                </button>
+                <div class="accordion-panel">
+                  <p>Users may verify licences by searching the public register by licence number, company name, or domain name. Licence certificates also include a QR code that links directly to the official verification page.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-trigger">
+                  What documents are required for an application?
+                  <span class="accordion-icon">&#9670;</span>
+                </button>
+                <div class="accordion-panel">
+                  <p>Applicants are required to provide corporate formation documents, information relating to directors and beneficial owners, identification documentation, and completed application forms and declarations. Additional documentation may be requested where necessary.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-trigger">
+                  How long is a licence valid?
+                  <span class="accordion-icon">&#9670;</span>
+                </button>
+                <div class="accordion-panel">
+                  <p>Licence validity periods are defined at the time of issuance. Licences are subject to annual renewal upon payment of applicable renewal fees and continued compliance with licence conditions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 24: Tab Panel -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">24</span>
+        <span class="pl-name">Tab Panel</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="tabs" data-tabs>
+              <div class="tab-bar">
+                <button class="tab-btn active" data-tab="tab-b2c">B2C Operator</button>
+                <button class="tab-btn" data-tab="tab-b2b">B2B Provider</button>
+              </div>
+              <div class="tab-panel active" id="tab-b2c">
+                <p>B2C Operator Licences are issued to entities operating online gaming platforms offering services directly to players. Operators must maintain compliance with all applicable licence conditions including responsible gaming obligations and anti-money laundering provisions.</p>
+              </div>
+              <div class="tab-panel" id="tab-b2b">
+                <p>B2B Service Provider Licences are issued to companies providing technology, platform, or support services to licensed gaming operators. Service providers are subject to defined compliance obligations and ongoing supervisory oversight.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 25: Search Bar -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">25</span>
+        <span class="pl-name">Search Bar</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-navy">
+          <div class="section-inner">
+            <div class="section-header" style="text-align:center">
+              <h2 class="section-title">Verify a Licence</h2>
+              <div class="section-rule" style="margin:1rem auto 0"></div>
+            </div>
+            <div class="search-verify">
+              <div class="search-group">
+                <input type="text" class="search-input" placeholder="Enter licence number, company name, or domain...">
+                <button class="search-btn">Verify</button>
+              </div>
+              <p class="search-help">Search by licence number, company name, or domain name</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       CALLS TO ACTION
+       ============================ -->
+  <div class="pl-section" id="cat-cta">
+    <div class="pl-category">
+      <div class="pl-category-title">Calls to Action</div>
+      <div class="pl-category-count">Patterns 26 - 28</div>
+    </div>
+
+    <!-- Pattern 26: CTA Banner -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">26</span>
+        <span class="pl-name">CTA Banner (full-width)</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <div class="cta-banner">
+          <div class="cta-banner-inner">
+            <h2>Apply for a Licence</h2>
+            <p>The Authority issues Internet Gaming Licences to qualified applicants engaged in digital gaming operations. Begin the application process today.</p>
+            <a href="#" class="btn-white">Start Application</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pattern 27: Inline CTA -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">27</span>
+        <span class="pl-name">Inline CTA</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="inline-cta" style="max-width:780px;border-top:1px solid var(--navy-10);border-bottom:1px solid var(--navy-10);">
+              <p>Applicants should consult the Authority for current fee schedules and application requirements.</p>
+              <a href="#" class="cta-link">Contact the Authority &#8594;</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 28: Button Pair -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">28</span>
+        <span class="pl-name">Button Pair</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <!-- Light variant -->
+        <section class="section section-light">
+          <div class="section-inner">
+            <p style="font-family:var(--font-mono);font-size:0.6875rem;text-transform:uppercase;letter-spacing:0.06em;color:rgba(30,40,65,0.4);margin-bottom:1rem;">On light background</p>
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Apply for a Licence</a>
+              <a href="#" class="btn btn-ghost">Verify a Licence</a>
+            </div>
+            <div class="btn-group" style="margin-top:1.5rem;">
+              <a href="#" class="btn btn-primary btn-lg">Large Button</a>
+              <a href="#" class="btn btn-primary btn-sm">Small</a>
+            </div>
+          </div>
+        </section>
+        <!-- Dark variant -->
+        <section class="section section-navy" style="padding-top:2rem;">
+          <div class="section-inner">
+            <p style="font-family:var(--font-mono);font-size:0.6875rem;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.3);margin-bottom:1rem;">On dark background</p>
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Apply for a Licence</a>
+              <a href="#" class="btn btn-ghost">Learn More</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       NAVIGATION & STRUCTURE
+       ============================ -->
+  <div class="pl-section" id="cat-nav">
+    <div class="pl-category">
+      <div class="pl-category-title">Navigation &amp; Structure</div>
+      <div class="pl-category-count">Patterns 29 - 31</div>
+    </div>
+
+    <!-- Pattern 29: Breadcrumb -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">29</span>
+        <span class="pl-name">Breadcrumb</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light" style="padding:2rem;">
+          <div class="section-inner">
+            <nav class="breadcrumb" style="color:rgba(30,40,65,0.4)">
+              <a href="#" style="color:rgba(30,40,65,0.5)">Home</a>
+              <span class="sep" style="color:rgba(30,40,65,0.2)">/</span>
+              <a href="#" style="color:rgba(30,40,65,0.5)">Regulatory Framework</a>
+              <span class="sep" style="color:rgba(30,40,65,0.2)">/</span>
+              <span style="color:rgba(30,40,65,0.7)">Licensing Due Diligence</span>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 30: Page TOC / Sticky Anchor Nav -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">30</span>
+        <span class="pl-name">Page TOC / Sticky Anchor Nav</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <nav class="anchor-nav" style="position:relative;top:0;">
+          <div class="anchor-nav-inner">
+            <a href="#" class="active">Due Diligence</a>
+            <a href="#">Ongoing Supervision</a>
+            <a href="#">Enforcement Policy</a>
+            <a href="#">Complaint Policy</a>
+            <a href="#">Certificate Verification</a>
+            <a href="#">Licence Seal Policy</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Pattern 31: Section Divider -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">31</span>
+        <span class="pl-name">Section Divider</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <p style="font-size:0.9375rem;color:rgba(30,40,65,0.7);margin-bottom:1rem;">Content above the divider...</p>
+            <div class="section-divider">
+              <span>Enforcement Policy</span>
+            </div>
+            <p style="font-size:0.9375rem;color:rgba(30,40,65,0.7);margin-top:1rem;">Content below the divider...</p>
+            <div class="section-divider-rule"></div>
+            <p style="font-size:0.9375rem;color:rgba(30,40,65,0.7);">Accent rule variant (no label).</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       NOTICES & STATUS
+       ============================ -->
+  <div class="pl-section" id="cat-notices">
+    <div class="pl-category">
+      <div class="pl-category-title">Notices &amp; Status</div>
+      <div class="pl-category-count">Patterns 32 - 34</div>
+    </div>
+
+    <!-- Pattern 32: Notice Timeline -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">32</span>
+        <span class="pl-name">Notice Timeline</span>
+        <span class="pl-tag">Existing v1.1</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-navy">
+          <div class="section-inner">
+            <div class="notices-list">
+              <div class="notice-item">
+                <div class="notice-meta">
+                  <span class="notice-date mono">2026-03-10</span>
+                  <span class="notice-type">Notice</span>
+                </div>
+                <div class="notice-content">
+                  <h3>Compliance Reporting Deadline</h3>
+                  <p>All licensed operators are reminded that Q1 2026 compliance reports are due by 30 April 2026 in accordance with licence conditions.</p>
+                </div>
+              </div>
+              <div class="notice-item">
+                <div class="notice-meta">
+                  <span class="notice-date mono">2026-02-24</span>
+                  <span class="notice-type">Update</span>
+                </div>
+                <div class="notice-content">
+                  <h3>Revised Certificate Verification Framework</h3>
+                  <p>The authority has published an updated Certificate Verification Framework effective 1 April 2026.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 33: Status Badge Set -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">33</span>
+        <span class="pl-name">Status Badge Set</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+              <span class="status-badge status-active">Active</span>
+              <span class="status-badge status-suspended">Suspended</span>
+              <span class="status-badge status-revoked">Revoked</span>
+              <span class="status-badge status-expired">Expired</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 34: Alert Banner -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">34</span>
+        <span class="pl-name">Alert Banner</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <div class="alert-banner alert-banner-urgent">
+          <span class="alert-date">2026-03-15</span>
+          <p>Compliance reports for Q1 2026 are due by 30 April 2026. All licensed operators must submit reports by the deadline.</p>
+          <button class="alert-close">&times;</button>
+        </div>
+        <div class="alert-banner alert-banner-info">
+          <span class="alert-date">2026-03-10</span>
+          <p>The Certificate Verification Framework has been updated. Licensed operators should review the revised requirements.</p>
+          <button class="alert-close">&times;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       TRUST & AUTHORITY
+       ============================ -->
+  <div class="pl-section" id="cat-trust">
+    <div class="pl-category">
+      <div class="pl-category-title">Trust &amp; Authority</div>
+      <div class="pl-category-count">Patterns 35 - 37</div>
+    </div>
+
+    <!-- Pattern 35: Seal Display -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">35</span>
+        <span class="pl-name">Seal Display Block</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="seal-display" style="max-width:480px;margin:0 auto;">
+              <div class="seal-placeholder">
+                <span>Licence Seal</span>
+              </div>
+              <p class="seal-caption">The official Anjouan Gaming Authority licence seal links directly to the licence verification page in the public registry.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 36: Certificate Preview -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">36</span>
+        <span class="pl-name">Certificate Preview</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="cert-preview">
+              <div class="cert-header">
+                <img src="images/logo-dark.svg" alt="Anjouan Gaming" class="cert-logo">
+                <h3 class="cert-title">Internet Gaming Licence</h3>
+              </div>
+              <div class="cert-body">
+                <div class="kv-display">
+                  <div class="kv-row" style="border-bottom-color:var(--navy-10);">
+                    <div class="kv-label" style="color:rgba(30,40,65,0.5)">Licensee</div>
+                    <div class="kv-value" style="color:var(--navy)">Example Gaming Ltd.</div>
+                  </div>
+                  <div class="kv-row" style="border-bottom-color:var(--navy-10);">
+                    <div class="kv-label" style="color:rgba(30,40,65,0.5)">Licence No.</div>
+                    <div class="kv-value" style="color:var(--navy);font-family:var(--font-mono)">AGA-2026-00142</div>
+                  </div>
+                  <div class="kv-row" style="border-bottom-color:var(--navy-10);">
+                    <div class="kv-label" style="color:rgba(30,40,65,0.5)">Status</div>
+                    <div class="kv-value"><span class="status-badge status-active">Active</span></div>
+                  </div>
+                  <div class="kv-row" style="border-bottom-color:var(--navy-10);">
+                    <div class="kv-label" style="color:rgba(30,40,65,0.5)">Valid Until</div>
+                    <div class="kv-value" style="color:var(--navy)">31 December 2027</div>
+                  </div>
+                </div>
+                <div class="cert-qr">
+                  <span>QR Code</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 37: Authority Logo Bar -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">37</span>
+        <span class="pl-name">Authority Logo Bar</span>
+        <span class="pl-tag">New</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light" style="padding:0;">
+          <div class="section-inner">
+            <div class="authority-bar">
+              <div class="authority-bar-label">Governing Bodies</div>
+              <div class="authority-logos">
+                <span class="authority-logo-item">Anjouan Offshore Financial Authority</span>
+                <div class="authority-logo-sep"></div>
+                <span class="authority-logo-item">Anjouan Gaming Board</span>
+                <div class="authority-logo-sep"></div>
+                <span class="authority-logo-item">Anjouan Licensing Services Inc.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       GLOBAL
+       ============================ -->
+  <div class="pl-section" id="cat-global">
+    <div class="pl-category">
+      <div class="pl-category-title">Global</div>
+      <div class="pl-category-count">Patterns 38 - 39</div>
+    </div>
+
+    <!-- Pattern 38: Site Header -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">38</span>
+        <span class="pl-name">Site Header</span>
+        <span class="pl-tag">Existing v1.1</span>
+      </div>
+      <div class="pl-preview">
+        <header class="site-header">
+          <div class="header-inner">
+            <a href="#" class="logo-link">
+              <img src="images/logo-light.svg" alt="Anjouan Gaming" class="logo">
+            </a>
+            <nav class="main-nav" style="position:static;transform:none;">
+              <ul class="nav-list">
+                <li class="nav-item active"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Regulatory Framework</a></li>
+                <li class="nav-item"><a href="#">Licensing</a></li>
+                <li class="nav-item"><a href="#">Public Register</a></li>
+                <li class="nav-item"><a href="#">Enforcement</a></li>
+                <li class="nav-item"><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-rule"></div>
+        </header>
+      </div>
+    </div>
+
+    <!-- Pattern 39: Site Footer -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">39</span>
+        <span class="pl-name">Site Footer</span>
+        <span class="pl-tag">Existing v1.1</span>
+      </div>
+      <div class="pl-preview">
+        <footer class="site-footer">
+          <div class="footer-inner">
+            <div class="footer-grid">
+              <div class="footer-col footer-col--about">
+                <img src="images/logo-light.svg" alt="Anjouan Gaming" class="footer-logo">
+                <p>The designated regulatory authority for internet gaming licensing under the laws of the Autonomous Island of Anjouan, Union of the Comoros.</p>
+              </div>
+              <div class="footer-col">
+                <h4>Regulatory</h4>
+                <ul>
+                  <li><a href="#">Regulatory Framework</a></li>
+                  <li><a href="#">Licensing</a></li>
+                  <li><a href="#">Public Register</a></li>
+                  <li><a href="#">Enforcement</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                  <li><a href="#">Forms &amp; Downloads</a></li>
+                  <li><a href="#">Certificate Verification</a></li>
+                  <li><a href="#">Compliance Reporting</a></li>
+                  <li><a href="#">Responsible Gaming</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4>Contact Departments</h4>
+                <ul>
+                  <li><a href="#">General Enquiries</a></li>
+                  <li><a href="#">Licensing Department</a></li>
+                  <li><a href="#">Compliance &amp; Enforcement</a></li>
+                  <li><a href="#">Media &amp; Public Information</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <div class="footer-rule"></div>
+              <div class="footer-legal">
+                <p>&copy; 2026 Anjouan Gaming. All rights reserved.</p>
+                <p class="mono">Autonomous Island of Anjouan &middot; Union of the Comoros</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       GUTENBERG CORE BLOCKS
+       ============================ -->
+  <div class="pl-section" id="cat-gutenberg">
+    <div class="pl-category">
+      <div class="pl-category-title">Gutenberg Core Blocks (styled)</div>
+      <div class="pl-category-count">Patterns 40 - 60</div>
+    </div>
+
+    <!-- Pattern 40: Headings -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">40</span>
+        <span class="pl-name">Headings h1-h6</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <h1 class="wp-block-heading">Heading Level 1</h1>
+            <h2 class="wp-block-heading">Heading Level 2</h2>
+            <h3 class="wp-block-heading">Heading Level 3</h3>
+            <h4 class="wp-block-heading">Heading Level 4</h4>
+            <h5 class="wp-block-heading">Heading Level 5</h5>
+            <h6 class="wp-block-heading">Heading Level 6</h6>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 41: Paragraph -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">41</span>
+        <span class="pl-name">Paragraph</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner" style="max-width:780px;">
+            <p>The Anjouan Gaming Authority administers and supervises Internet Gaming Licences issued under the regulatory framework of the Autonomous Island of Anjouan. Licensed operators are required to comply with the <a href="#" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">conditions of their licence</a> and remain subject to regulatory oversight throughout the term of the licence.</p>
+            <p style="margin-top:1.25rem;">This paragraph contains <strong>bold text</strong>, <em>italic text</em>, and <mark style="background:rgba(139,24,37,0.1);padding:0.1em 0.25em;">highlighted text</mark>. You can also use <a href="#" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">inline links</a> styled in the accent colour.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 42: Image -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">42</span>
+        <span class="pl-name">Image</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner" style="max-width:640px;">
+            <figure class="wp-block-image">
+              <div style="width:100%;height:200px;background:var(--navy);display:flex;align-items:center;justify-content:center;">
+                <span style="font-family:var(--font-mono);font-size:0.8125rem;color:rgba(255,255,255,0.3);">Image Placeholder</span>
+              </div>
+              <figcaption class="wp-element-caption">Caption text appears below the image in mono font at reduced opacity.</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 43: Gallery -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">43</span>
+        <span class="pl-name">Gallery</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <figure class="wp-block-gallery columns-3">
+              <figure class="wp-block-image"><div style="width:100%;height:200px;background:var(--navy-deep);"></div></figure>
+              <figure class="wp-block-image"><div style="width:100%;height:200px;background:var(--navy);"></div></figure>
+              <figure class="wp-block-image"><div style="width:100%;height:200px;background:var(--navy-deep);"></div></figure>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 44: Video/Embed -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">44</span>
+        <span class="pl-name">Video / Embed</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner" style="max-width:780px;">
+            <figure class="wp-block-embed">
+              <div class="wp-block-embed__wrapper">
+                <div class="embed-placeholder">Video / Embed Placeholder (16:9)</div>
+              </div>
+              <figcaption class="wp-element-caption">Embedded media with caption styling.</figcaption>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 45: Buttons -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">45</span>
+        <span class="pl-name">Buttons</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="wp-block-buttons">
+              <div class="wp-block-button">
+                <a class="wp-block-button__link wp-element-button" href="#">Apply for a Licence</a>
+              </div>
+              <div class="wp-block-button is-style-outline">
+                <a class="wp-block-button__link wp-element-button" href="#">Verify a Licence</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 46: Columns -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">46</span>
+        <span class="pl-name">Columns</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="wp-block-columns has-2-columns">
+              <div class="wp-block-column">
+                <h3 class="wp-block-heading">Column One</h3>
+                <p style="font-size:0.9375rem;color:rgba(30,40,65,0.7);">The Authority administers licence applications, maintains the public licence registry, and monitors compliance with applicable licence conditions.</p>
+              </div>
+              <div class="wp-block-column">
+                <h3 class="wp-block-heading">Column Two</h3>
+                <p style="font-size:0.9375rem;color:rgba(30,40,65,0.7);">Licensed operators are required to provide accurate operational information and maintain compliance with the terms of their licence throughout its validity.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 47: Group -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">47</span>
+        <span class="pl-name">Group / Container</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;">
+              <div class="wp-block-group group-light" style="margin:0;">
+                <h4 class="wp-block-heading" style="font-size:0.6875rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em;color:rgba(30,40,65,0.4);margin-bottom:0.75rem;">group-light</h4>
+                <p style="font-size:0.875rem;color:rgba(30,40,65,0.7);">Light background with border. Used for content containers on white pages.</p>
+              </div>
+              <div class="wp-block-group group-navy" style="margin:0;">
+                <h4 class="wp-block-heading" style="font-size:0.6875rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.4);margin-bottom:0.75rem;">group-navy</h4>
+                <p>Navy background for contrast sections and callouts.</p>
+              </div>
+              <div class="wp-block-group group-bordered" style="margin:0;">
+                <h4 class="wp-block-heading" style="font-size:0.6875rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em;color:rgba(30,40,65,0.4);margin-bottom:0.75rem;">group-bordered</h4>
+                <p style="font-size:0.875rem;color:rgba(30,40,65,0.7);">White background with border. Used for card-like containers.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 48: Cover -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">48</span>
+        <span class="pl-name">Cover</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <div class="wp-block-cover">
+          <div class="wp-block-cover__background"></div>
+          <div class="wp-block-cover__inner-container">
+            <h2 class="wp-block-heading" style="margin-bottom:1rem;">Regulatory Authority</h2>
+            <p>Transparency, integrity, and stability within the licensing framework of the Autonomous Island of Anjouan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pattern 49: Separator -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">49</span>
+        <span class="pl-name">Separator</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner" style="max-width:780px;">
+            <p style="font-family:var(--font-mono);font-size:0.6875rem;color:rgba(30,40,65,0.35);text-transform:uppercase;letter-spacing:0.04em;">Default</p>
+            <hr class="wp-block-separator is-style-default">
+            <p style="font-family:var(--font-mono);font-size:0.6875rem;color:rgba(30,40,65,0.35);text-transform:uppercase;letter-spacing:0.04em;">Accent</p>
+            <hr class="wp-block-separator is-style-accent">
+            <p style="font-family:var(--font-mono);font-size:0.6875rem;color:rgba(30,40,65,0.35);text-transform:uppercase;letter-spacing:0.04em;">Diamonds</p>
+            <hr class="wp-block-separator is-style-diamonds">
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 50: Spacer -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">50</span>
+        <span class="pl-name">Spacer</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light" style="padding:2rem;">
+          <div class="section-inner">
+            <div style="display:flex;gap:1rem;align-items:flex-end;">
+              <div style="text-align:center;">
+                <div class="wp-block-spacer spacer-sm" style="background:rgba(139,24,37,0.06);width:60px;"></div>
+                <span style="font-family:var(--font-mono);font-size:0.625rem;color:rgba(30,40,65,0.4);">SM / 2rem</span>
+              </div>
+              <div style="text-align:center;">
+                <div class="wp-block-spacer spacer-md" style="background:rgba(139,24,37,0.06);width:60px;"></div>
+                <span style="font-family:var(--font-mono);font-size:0.625rem;color:rgba(30,40,65,0.4);">MD / 4rem</span>
+              </div>
+              <div style="text-align:center;">
+                <div class="wp-block-spacer spacer-lg" style="background:rgba(139,24,37,0.06);width:60px;"></div>
+                <span style="font-family:var(--font-mono);font-size:0.625rem;color:rgba(30,40,65,0.4);">LG / 6rem</span>
+              </div>
+              <div style="text-align:center;">
+                <div class="wp-block-spacer spacer-xl" style="background:rgba(139,24,37,0.06);width:60px;"></div>
+                <span style="font-family:var(--font-mono);font-size:0.625rem;color:rgba(30,40,65,0.4);">XL / 8rem</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 51: List -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">51</span>
+        <span class="pl-name">List (Unordered &amp; Ordered)</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner" style="max-width:640px;">
+            <h4 class="wp-block-heading" style="margin-bottom:0.75rem;">Unordered List</h4>
+            <ul class="wp-block-list">
+              <li>Administration of Internet Gaming Licences</li>
+              <li>Oversight of compliance with licence conditions</li>
+              <li>Maintenance of the public licence registry</li>
+              <li>Proportionate regulatory enforcement where necessary</li>
+            </ul>
+            <h4 class="wp-block-heading" style="margin-bottom:0.75rem;">Ordered List</h4>
+            <ol class="wp-block-list">
+              <li>Submission of application documentation</li>
+              <li>Review of applicant information</li>
+              <li>Completion of regulatory due diligence</li>
+              <li>Issuance of licence upon approval</li>
+            </ol>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 52: Quote / Pullquote -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">52</span>
+        <span class="pl-name">Quote / Pullquote</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner" style="max-width:780px;">
+            <blockquote class="wp-block-quote">
+              <p>The Authority operates according to core regulatory principles designed to maintain transparency, integrity, and stability within the licensing framework.</p>
+              <cite>Regulatory Principles Charter</cite>
+            </blockquote>
+            <figure class="wp-block-pullquote">
+              <blockquote>
+                <p>Maintaining a transparent and stable licensing environment for the international digital gaming industry.</p>
+              </blockquote>
+              <cite>Anjouan Gaming Authority</cite>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 53: Table -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">53</span>
+        <span class="pl-name">Table</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner">
+            <figure class="wp-block-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Licence Number</th>
+                    <th>Operator</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-family:var(--font-mono);font-size:0.8125rem;">AGA-2026-00138</td>
+                    <td>Alpha Gaming Ltd.</td>
+                    <td><span class="status-badge status-suspended">Suspended</span></td>
+                    <td>2026-02-10</td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:var(--font-mono);font-size:0.8125rem;">AGA-2025-00097</td>
+                    <td>Beta Entertainment Inc.</td>
+                    <td><span class="status-badge status-revoked">Revoked</span></td>
+                    <td>2026-01-15</td>
+                  </tr>
+                  <tr>
+                    <td style="font-family:var(--font-mono);font-size:0.8125rem;">AGA-2026-00142</td>
+                    <td>Example Gaming Ltd.</td>
+                    <td><span class="status-badge status-active">Active</span></td>
+                    <td>2026-03-01</td>
+                  </tr>
+                </tbody>
+              </table>
+            </figure>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 54: Details -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">54</span>
+        <span class="pl-name">Details (Native Accordion)</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner" style="max-width:780px;">
+            <details class="wp-block-details" open>
+              <summary>What is the application process?</summary>
+              <div class="wp-block-details__content">
+                <p>Applicants seeking an Internet Gaming Licence must complete the licensing process and provide the required documentation. The process includes submission, review, due diligence, and issuance upon approval.</p>
+              </div>
+            </details>
+            <details class="wp-block-details">
+              <summary>How long does the process take?</summary>
+              <div class="wp-block-details__content">
+                <p>Processing times depend on the completeness of documentation submitted and the scope of regulatory due diligence required. Applicants may be required to provide additional documentation during the review process.</p>
+              </div>
+            </details>
+            <details class="wp-block-details">
+              <summary>What are the licence fees?</summary>
+              <div class="wp-block-details__content">
+                <p>Licensing fees include application fees, licence issuance fees, and annual renewal fees. Applicants should consult the Authority for current fee schedules.</p>
+              </div>
+            </details>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 55: File -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">55</span>
+        <span class="pl-name">File</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner" style="max-width:640px;">
+            <div class="wp-block-file">
+              <span class="download-badge">PDF</span>
+              <div class="wp-block-file__content-wrapper">
+                <a href="#">Licence Application Form 2026</a>
+              </div>
+              <a class="wp-block-file__button" href="#">Download &#8595;</a>
+            </div>
+            <div class="wp-block-file">
+              <span class="download-badge">DOCX</span>
+              <div class="wp-block-file__content-wrapper">
+                <a href="#">Compliance Report Template</a>
+              </div>
+              <a class="wp-block-file__button" href="#">Download &#8595;</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 56: Search -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">56</span>
+        <span class="pl-name">Search</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light">
+          <div class="section-inner" style="max-width:480px;">
+            <div class="wp-block-search">
+              <input type="search" class="wp-block-search__input" placeholder="Search...">
+              <button class="wp-block-search__button">Search</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 57: Social Links -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">57</span>
+        <span class="pl-name">Social Links</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light" style="padding:2rem;">
+          <div class="section-inner">
+            <p style="font-family:var(--font-mono);font-size:0.6875rem;color:rgba(30,40,65,0.35);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.75rem;">On light background</p>
+            <ul class="wp-block-social-links">
+              <li class="wp-block-social-link">X</li>
+              <li class="wp-block-social-link">Li</li>
+              <li class="wp-block-social-link">Fb</li>
+              <li class="wp-block-social-link">Ig</li>
+            </ul>
+          </div>
+        </section>
+        <section class="section section-navy" style="padding:2rem;">
+          <div class="section-inner">
+            <p style="font-family:var(--font-mono);font-size:0.6875rem;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.75rem;">On dark background</p>
+            <ul class="wp-block-social-links">
+              <li class="wp-block-social-link">X</li>
+              <li class="wp-block-social-link">Li</li>
+              <li class="wp-block-social-link">Fb</li>
+              <li class="wp-block-social-link">Ig</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 58: Navigation (standalone) - covered by Pattern 38 -->
+
+    <!-- Pattern 59: Query Loop / Post List -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">59</span>
+        <span class="pl-name">Query Loop / Post List</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-navy">
+          <div class="section-inner">
+            <div class="notices-list">
+              <div class="notice-item">
+                <div class="notice-meta">
+                  <span class="notice-date mono">2026-03-15</span>
+                  <span class="notice-type">Notice</span>
+                </div>
+                <div class="notice-content">
+                  <h3>Updated Fee Schedule Published</h3>
+                  <p>The Authority has published a revised fee schedule effective 1 May 2026. All applicants should review the updated requirements.</p>
+                </div>
+              </div>
+              <div class="notice-item">
+                <div class="notice-meta">
+                  <span class="notice-date mono">2026-03-10</span>
+                  <span class="notice-type">Update</span>
+                </div>
+                <div class="notice-content">
+                  <h3>Compliance Reporting Deadline</h3>
+                  <p>Q1 2026 compliance reports are due by 30 April 2026 in accordance with licence conditions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Pattern 60: Pagination -->
+    <div class="pl-pattern">
+      <div class="pl-label">
+        <span class="pl-number">60</span>
+        <span class="pl-name">Pagination</span>
+        <span class="pl-tag">Core Block</span>
+      </div>
+      <div class="pl-preview">
+        <section class="section section-light" style="padding:2rem;">
+          <div class="section-inner">
+            <nav class="wp-block-query-pagination">
+              <a href="#" class="prev">&#8592; Prev</a>
+              <a href="#">1</a>
+              <span class="current">2</span>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+              <a href="#" class="next">Next &#8594;</a>
+            </nav>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- End spacer -->
+  <div style="height:6rem;background:#0D0F14;"></div>
+
+  <!-- ============================
+       JavaScript
+       ============================ -->
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Accordion ---
+      document.querySelectorAll('.accordion-trigger').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var item = btn.closest('.accordion-item');
+          var wasOpen = item.classList.contains('open');
+          // Close all siblings
+          item.closest('.accordion').querySelectorAll('.accordion-item').forEach(function(el) {
+            el.classList.remove('open');
+          });
+          // Toggle clicked
+          if (!wasOpen) {
+            item.classList.add('open');
+          }
+        });
+      });
+
+      // --- Tabs ---
+      document.querySelectorAll('[data-tabs]').forEach(function(tabContainer) {
+        var btns = tabContainer.querySelectorAll('.tab-btn');
+        var panels = tabContainer.querySelectorAll('.tab-panel');
+
+        btns.forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            btns.forEach(function(b) { b.classList.remove('active'); });
+            panels.forEach(function(p) { p.classList.remove('active'); });
+            btn.classList.add('active');
+            var target = document.getElementById(btn.getAttribute('data-tab'));
+            if (target) target.classList.add('active');
+          });
+        });
+      });
+
+      // --- Alert close ---
+      document.querySelectorAll('.alert-close').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          btn.closest('.alert-banner').style.display = 'none';
+        });
+      });
+
+      // --- Smooth scroll for PL nav ---
+      document.querySelectorAll('.pl-nav a').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          e.preventDefault();
+          var target = document.querySelector(a.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
